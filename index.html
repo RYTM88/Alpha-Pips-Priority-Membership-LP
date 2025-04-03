@@ -22,7 +22,7 @@
             --green: #00cc66;
             --red: #ff5252;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -30,14 +30,14 @@
             font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
         }
-        
+
         body {
             background: var(--primary);
             color: var(--text);
             font-weight: 300;
             font-size: 18px; /* ベースフォントサイズを大きく */
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -45,7 +45,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         header {
             background: rgba(10, 14, 23, 0.8);
             backdrop-filter: blur(10px);
@@ -56,13 +56,13 @@
             z-index: 1000;
             border-bottom: 1px solid var(--border);
         }
-        
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-weight: 700;
             font-size: 1.5rem;
@@ -70,21 +70,21 @@
             display: flex;
             align-items: center;
         }
-        
+
         .logo span.green {
             color: var(--green);
         }
-        
+
         .logo span.red {
             color: var(--red);
         }
-        
+
         .hero {
             padding: 200px 0 50px;
             position: relative;
             background: linear-gradient(to bottom, var(--secondary), var(--primary));
         }
-        
+
         h1 {
             font-size: 3.5rem;
             font-weight: 700;
@@ -95,7 +95,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         h2 {
             font-size: 2.2rem;
             font-weight: 600;
@@ -105,14 +105,14 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         h3 {
             font-size: 1.6rem;
             font-weight: 600;
             margin: 30px 0 15px;
             color: var(--accent2);
         }
-        
+
         .lead {
             font-size: 1.6rem;
             max-width: 800px;
@@ -120,7 +120,7 @@
             font-weight: 300;
             color: var(--text-secondary);
         }
-        
+
         .lead-2x {
             font-size: 1.8rem;
             font-weight: 400;
@@ -129,23 +129,23 @@
             margin: 0 auto 40px;
             color: var(--text);
         }
-        
+
         section {
             padding: 100px 0;
             position: relative;
         }
-        
+
         section.alt {
             background: var(--secondary);
         }
-        
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin: 50px 0;
         }
-        
+
         .feature {
             background: rgba(18, 24, 36, 0.5);
             padding: 35px;
@@ -154,19 +154,19 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             font-size: 1.1rem; /* 機能説明のフォントサイズアップ */
         }
-        
+
         .feature:hover {
             transform: translateY(-5px);
             box-shadow: var(--glow);
             border-color: rgba(0, 126, 255, 0.3);
         }
-        
+
         .feature-icon {
             font-size: 2.4rem;
             margin-bottom: 24px;
             color: var(--accent2);
         }
-        
+
         .btn {
             display: inline-block;
             background: var(--btn-gradient);
@@ -182,47 +182,47 @@
             box-shadow: var(--glow);
             transition: all 0.3s ease;
         }
-        
+
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 126, 255, 0.5);
         }
-        
+
         .btn-large {
             padding: 22px 55px;
             font-size: 1.35rem;
             letter-spacing: 0.5px;
         }
-        
+
         .cta {
             background: linear-gradient(135deg, var(--accent), var(--accent3));
             text-align: center;
             padding: 100px 0;
         }
-        
+
         .cta h2 {
             background: #ffffff;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .cta .btn {
             background: #ffffff;
             color: var(--accent);
         }
-        
+
         ul {
             margin: 20px 0;
             list-style-type: none;
         }
-        
+
         ul li {
             margin-bottom: 15px;
             position: relative;
             padding-left: 25px;
         }
-        
+
         ul li::before {
             content: '→';
             position: absolute;
@@ -230,7 +230,7 @@
             top: 0;
             color: var(--accent);
         }
-        
+
         .pricing {
             background: rgba(18, 24, 36, 0.5);
             border-radius: 20px;
@@ -241,13 +241,13 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .pricing:hover {
             transform: translateY(-5px);
             box-shadow: var(--glow);
             border-color: rgba(0, 126, 255, 0.3);
         }
-        
+
         .price {
             font-size: 3.8rem;
             font-weight: 700;
@@ -258,40 +258,40 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .price-period {
             font-size: 1.4rem;
             color: white;
             vertical-align: middle;
         }
-        
+
         .price-info {
             font-style: italic;
             margin-bottom: 20px;
             color: var(--text-secondary);
             font-size: 1.2rem;
         }
-        
+
         .benefits {
             text-align: left;
             max-width: 600px;
             margin: 30px auto;
             font-size: 1.15rem;
         }
-        
+
         .benefit {
             display: flex;
             align-items: flex-start;
             margin-bottom: 20px;
             text-align: left;
         }
-        
+
         .benefit-icon {
             margin-right: 15px;
             color: var(--accent);
             font-size: 1.2rem;
         }
-        
+
         .divider {
             width: 100px;
             height: 3px;
@@ -299,13 +299,13 @@
             margin: 30px auto;
             border-radius: 3px;
         }
-        
+
         .limited-spots {
             display: flex;
             justify-content: center;
             margin: 30px 0;
         }
-        
+
         .spot {
             width: 40px;
             height: 10px;
@@ -313,12 +313,12 @@
             margin: 0 5px;
             border-radius: 5px;
         }
-        
+
         .spot.filled {
             background: var(--btn-gradient);
             box-shadow: var(--glow);
         }
-        
+
         .elite-text {
             font-size: 1.2rem;
             font-weight: 500;
@@ -326,7 +326,7 @@
             color: var(--accent2);
             letter-spacing: 1px;
         }
-        
+
         .faq-item {
             margin-bottom: 35px;
             background: rgba(18, 24, 36, 0.5);
@@ -335,30 +335,30 @@
             border: 1px solid var(--border);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .faq-item:hover {
             transform: translateY(-3px);
             box-shadow: var(--glow);
             border-color: rgba(0, 126, 255, 0.3);
         }
-        
+
         .faq-question {
             font-weight: 600;
             font-size: 1.3rem;
             margin-bottom: 18px;
             color: var(--accent2);
         }
-        
+
         .faq-item p {
             font-size: 1.1rem;
             line-height: 1.7;
         }
-        
+
         .highlight {
             color: var(--accent2);
             font-weight: 500;
         }
-        
+
         .monitor-badge {
             display: inline-flex;
             align-items: center;
@@ -371,7 +371,7 @@
             font-weight: 600;
             letter-spacing: 0.5px;
         }
-        
+
         .hero-image {
             width: 100%;
             margin-top: 50px;
@@ -381,13 +381,13 @@
             border: 1px solid var(--border);
             position: relative;
         }
-        
+
         .hero-image img {
             width: 100%;
             display: block;
             border-radius: 16px;
         }
-        
+
         .hero-image::before {
             content: '';
             position: absolute;
@@ -400,7 +400,7 @@
             pointer-events: none;
             border-radius: 16px;
         }
-        
+
         .image-wrapper {
             margin: 40px 0;
             border-radius: 16px;
@@ -409,13 +409,13 @@
             border: 1px solid var(--border);
             position: relative;
         }
-        
+
         .image-wrapper img {
             width: 100%;
             display: block;
             border-radius: 16px;
         }
-        
+
         .image-wrapper::before {
             content: '';
             position: absolute;
@@ -428,14 +428,14 @@
             pointer-events: none;
             border-radius: 16px;
         }
-        
+
         .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
         }
-        
+
         .image-caption {
             font-size: 1.05rem;
             text-align: center;
@@ -443,44 +443,44 @@
             margin-top: 18px;
             font-style: italic;
         }
-        
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.8rem;
             }
-            
+
             h2 {
                 font-size: 2.1rem;
             }
-            
+
             .lead {
                 font-size: 1.4rem;
             }
-            
+
             .lead-2x {
                 font-size: 1.6rem;
             }
-            
+
             .hero {
                 padding: 150px 0 80px;
             }
-            
+
             section {
                 padding: 60px 0;
             }
-            
+
             .features {
                 grid-template-columns: 1fr;
             }
-            
+
             .pricing {
                 padding: 35px;
             }
-            
+
             .two-col {
                 grid-template-columns: 1fr;
             }
-            
+
             body {
                 font-size: 17px;
             }
@@ -495,23 +495,23 @@
             </div>
         </div>
     </header>
-    
+
     <section class="hero">
         <div class="container">
             <div class="monitor-badge">プライオリティメンバー募集受付中</div>
             <h1>０努力、１００利益の時代へ</h1>
             <p class="lead-2x" style="text-align: left;">データ・AIを駆使し、最短最速で勝利を手にする<br>世界基準のトレード体験をその手に。</p>
-            
+
             <div class="hero-image">
-                <img src="images/lp1.png" alt="AI駆動の次世代トレーディングシステム"> <!-- ★修正★ -->
+                <img src="images/lp1.png" alt="AI駆動の次世代トレーディングシステム">
             </div>
         </div>
     </section>
-    
+
     <section>
         <div class="container">
             <h2>トレードの本質を変える、ATZ System</h2>
-            
+
             <div class="two-col">
                 <div>
                     <p>世界中のFXトレーダーが同じチャートを見ながら、なぜ結果に差が生まれるのか。</p>
@@ -519,22 +519,22 @@
                     <p>ATZ Systemは、10年のプロトレード経験と最新のデータ解析・AI技術を融合させた、次世代のトレーディングシステムです。</p>
                     <p>あなたはもう、感覚に頼ってトレードする必要はありません。そして無駄な「努力」や「労力」も必要ありません。<span class="highlight">データと大衆心理が織りなす市場のインサイトを手にする時</span>が来ました。</p>
                 </div>
-                
+
                 <div class="image-wrapper">
-                    <img src="images/lp2.png" alt="市場構造ラインの分析"> <!-- ★修正★ -->
+                    <img src="images/lp2.png" alt="市場構造ラインの分析">
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="alt">
         <div class="container">
             <h2>市場の真実を可視化する4つの革新</h2>
-            
+
             <div class="image-wrapper">
-                <img src="images/lp3.png" alt="ATZ Systemの4つのコンポーネント"> <!-- ★修正★ -->
+                <img src="images/lp3.png" alt="ATZ Systemの4つのコンポーネント">
             </div>
-            
+
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">📊</div>
@@ -546,7 +546,7 @@
                         <li>エントリーの確信 — 「なぜここでエントリーするのか」が明確に</li>
                     </ul>
                 </div>
-                
+
                 <div class="feature">
                     <div class="feature-icon">📈</div>
                     <h3>ATZ PRO</h3>
@@ -557,7 +557,7 @@
                         <li>テクニカル分析の次の時代へ</li>
                     </ul>
                 </div>
-                
+
                 <div class="feature">
                     <div class="feature-icon">🔍</div>
                     <h3>ATZ EDGE</h3>
@@ -568,7 +568,7 @@
                         <li>エッジを掴む視点 — 多くのトレーダーが見逃すエッジを認識</li>
                     </ul>
                 </div>
-                
+
                 <div class="feature">
                     <div class="feature-icon">🧠</div>
                     <h3>ATZ CORE</h3>
@@ -582,30 +582,30 @@
             </div>
         </div>
     </section>
-    
+
     <section>
         <div class="container">
             <h2>Alpha Pipsー世界上位５％への挑戦ー</h2>
-            
+
             <p>Alpha Pipsは日本最高峰、そして世界上位５％のエリート集団を目指すトレーダーチームです。</p>
-            
+
             <div class="image-wrapper">
-                <img src="images/lp4.png" alt="Alpha Pipsのロゴ"> <!-- ★修正★ -->
+                <img src="images/lp4.png" alt="Alpha Pipsのロゴ">
             </div>
         </div>
     </section>
-    
+
     <section class="alt">
         <div class="container">
             <h2>Alpha Pipsメンバーシップ — エクスクルーシブな体験</h2>
-            
+
             <p>Alpha Pipsメンバーシップは、本気でトレードに向き合うトレーダーだけの特別な環境です。</p>
             <p>勘に頼ったトレードから卒業し、AI・アルゴリズム主導の相場を生き抜く、真のトレーダーとしての成長をサポートします。</p>
-            
+
             <div class="image-wrapper">
-                <img src="images/lp5.png" alt="Alpha Pipsメンバーシップ"> <!-- ★修正★ -->
+                <img src="images/lp5.png" alt="Alpha Pipsメンバーシップ">
             </div>
-            
+
             <div class="features">
                 <div class="feature" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
@@ -613,57 +613,57 @@
                         <p>Market Structure Lines、ATZ PRO、ATZ EDGE、ATZ COREの4つのインジケーターを連携させた包括的分析システム。複雑な市場を多角的に解析します。</p>
                     </div>
                     <div class="image-wrapper" style="margin-top: 20px;">
-                        <img src="images/lp6.png" alt="ATZ システムパッケージ"> <!-- ★修正★ -->
+                        <img src="images/lp6.png" alt="ATZ システムパッケージ">
                     </div>
                 </div>
-                
+
                 <div class="feature" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <h3>MT5自動資金管理ツール</h3>
                         <p>トレードの真のカギである資金管理を自動最適化。ボタン１つで最適なロットを計算し、直感的な操作でリスク管理を徹底します。プロ級の資金戦略が今すぐ実現します。（要申請）</p>
                     </div>
                     <div class="image-wrapper" style="margin-top: 20px;">
-                        <img src="images/lp7.png" alt="資金管理ツール"> <!-- ★修正★ -->
+                        <img src="images/lp7.png" alt="資金管理ツール">
                     </div>
                 </div>
-                
+
                 <div class="feature" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <h3>マスタークラス動画講義</h3>
                         <p>マイティー本人による解説で、インジケーターの使い方から高度な戦略まで体系的に学習。自分のペースで何度でも振り返ることのできる高品質動画コンテンツを提供します。</p>
                     </div>
                     <div class="image-wrapper" style="margin-top: 20px;">
-                        <img src="images/lp8.png" alt="マスタークラス"> <!-- ★修正★ -->
+                        <img src="images/lp8.png" alt="マスタークラス">
                     </div>
                 </div>
-                
+
                 <div class="feature" style="display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <h3>プロフェッショナル定期解説</h3>
                         <p>ATZ Systemをもとにした定期的なチャート講義を発信し、理論と実践の架け橋となる貴重な学びの機会を提供します。</p>
                     </div>
                     <div class="image-wrapper" style="margin-top: 20px;">
-                        <img src="images/lp9.png" alt="プロフェッショナル解説"> <!-- ★修正★ -->
+                        <img src="images/lp9.png" alt="プロフェッショナル解説">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section id="offer">
         <div class="container">
             <h2>プライオリティメンバー特別募集</h2>
-            
+
             <div class="two-col">
                 <div>
                     <p>今回、Alpha Pipsは人数限定で特別なプライオリティメンバーを募集します。</p>
                     <p>あなたは単なる「初期メンバー」ではなく、チームにとって「<span class="highlight">特別な存在</span>」です。</p>
                 </div>
                 <div class="image-wrapper">
-                    <img src="images/lp10.png" alt="メンバーシップ特典"> <!-- ★修正★ -->
+                    <img src="images/lp10.png" alt="メンバーシップ特典">
                 </div>
             </div>
-            
+
             <div class="pricing">
                 <h3>プライオリティメンバー特別価格</h3>
                 <div class="price">¥15,000<span class="price-period">/月</span></div>
@@ -674,9 +674,9 @@
                     </span>
                 </div>
                 <p class="price-info">今後同じ形式での募集は行いません。<br>プライオリティメンバー限定のプランになります。</p>
-                
+
                 <div class="divider"></div>
-                
+
                 <h3>プライオリティメンバー限定特典</h3>
                 <div class="benefits">
                     <div class="benefit">
@@ -696,7 +696,7 @@
                         <div>その他コミュニティ内での優先アクセス権</div>
                     </div>
                 </div>
-                
+
                 <div class="limited-spots">
                     <div class="spot filled"></div>
                     <div class="spot filled"></div>
@@ -710,37 +710,37 @@
                     <div class="spot"></div>
                 </div>
                 <p class="elite-text">選ばれし精鋭へ</p>
-                
-                <a href="https://whop.com/alphapips/" class="btn btn-large">今すぐ参加する</a>
+
+                <a href="https://whop.com/checkout/plan_YEhhVXxAwu2Lq/" class="btn btn-large">今すぐ参加する</a> <!-- ★リンク修正★ -->
                 <p>※ 募集締切: 人数到達次第締め切り</p>
             </div>
-            
+
             <h3>FAQ</h3>
-            
+
             <div class="faq-item">
                 <div class="faq-question">このメンバーシップはどのような方に適していますか？</div>
                 <p>これまでのトレード経験を問わず誰にでも相応しいメンバーシップになっています。初心者の方はトレードの型をいち早く習得して、中級者以上の方は値動きの本質に触れることが出来ます。</p>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">どのくらいの資金からスタートできますか？</div>
                 <p>トレード資金が5万円からでも十分トレード可能です。ただし、余裕を持った資金でのスタートをお勧めします。</p>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">時間的な制約がある場合でも活用できますか？</div>
                 <p>はい。システムは効率性を重視して設計されており、限られたトレード時間でも最大の効果を発揮できるようサポートします。特に夕方～夜間のみトレード可能な会社員の方のパフォーマンスを上げられるよう設計しました。</p>
             </div>
         </div>
     </section>
-    
+
     <section class="cta">
         <div class="container">
             <h2>ここが未来の分岐点</h2>
             <p class="lead">最短最速クリアを目指し<br>人生は次のステップへ</p>
             <p>Alpha Pipsは、AI・アルゴリズム時代の新しいトレーダー像を目指します。</p>
             <p>この特別な機会は、限られた人数にのみ提供されます。</p>
-            <a href="https://whop.com/alphapips/" class="btn btn-large">Alpha Pipsメンバーシップに参加する</a>
+            <a href="https://whop.com/checkout/plan_YEhhVXxAwu2Lq/" class="btn btn-large">Alpha Pipsメンバーシップに参加する</a> <!-- ★リンク修正★ -->
                             <p>※ 募集締切: 人数到達次第締め切り</p>
         </div>
     </section>
