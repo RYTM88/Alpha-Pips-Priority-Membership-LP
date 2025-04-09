@@ -261,7 +261,7 @@
         .price {
             font-size: 3.8rem;
             font-weight: 700;
-            margin: 20px 0;
+            margin: 10px 0 0; /* 上マージン調整 */
             color: white;
             background: linear-gradient(90deg, var(--accent), var(--accent2));
             -webkit-background-clip: text;
@@ -275,15 +275,51 @@
             vertical-align: middle;
         }
 
-        /* --- 価格取り消し線スタイル修正 --- */
+        /* --- ★ 新しいスタイル: 初期費用表示 --- */
+        .initial-fee {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .initial-fee span {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        /* --- ここまで --- */
+
+        /* --- ★ 新しいスタイル: 割引ハイライト --- */
+        .discount-highlight {
+            background: rgba(255, 221, 0, 0.15);
+            border: 1px solid rgba(255, 221, 0, 0.4);
+            color: var(--yellow);
+            padding: 12px 25px;
+            border-radius: 12px;
+            margin: 15px auto 25px; /* マージン調整 */
+            display: inline-block; /* 中央寄せのため */
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 10px rgba(255, 221, 0, 0.2);
+        }
+
+        .discount-highlight .highlight-strong {
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin: 0 5px;
+        }
+        /* --- ここまで --- */
+
         .price-strikethrough {
             position: relative;
             display: inline-block;
-            color: #ff3b30; /* 元の初期費用部分の色に合わせる */
-            font-size: 1.2rem; /* 元の初期費用部分のサイズに合わせる */
-            font-weight: bold; /* 元の初期費用部分の太さに合わせる */
-            margin: 10px 0 20px; /* 元の要素のmarginを継承 */
-            text-align: center; /* 元の要素のtext-alignを継承 */
+            color: var(--text-secondary); /* 色を少し抑えめに */
+            font-size: 1.1rem; /* 通常価格のフォントサイズ調整 */
+            font-weight: 400; /* 通常価格のフォントウェイト調整 */
+            margin: 5px 0 15px; /* マージン調整 */
+            text-align: center;
         }
 
         .price-strikethrough::before {
@@ -292,17 +328,16 @@
             left: 0;
             top: 50%;
             width: 100%;
-            height: 2px;
-            background-color: #ff3b30;
-            transform: translateY(-50%); /* 中央に線を引く */
+            height: 1px; /* 線の太さを調整 */
+            background-color: var(--text-secondary); /* 線の色を調整 */
+            transform: translateY(-50%);
         }
-        /* --- ここまで修正 --- */
 
         .price-info {
             font-style: italic;
             margin-bottom: 20px;
             color: var(--text-secondary);
-            font-size: 1.2rem;
+            font-size: 1.1rem; /* フォントサイズ少し調整 */
         }
 
         .benefits {
@@ -391,6 +426,12 @@
             color: var(--accent2);
             font-weight: 500;
         }
+        /* --- ★ .highlight の色を黄色に変更する場合 --- */
+        .highlight.yellow {
+            color: var(--yellow);
+            font-weight: 600;
+        }
+
 
         .monitor-badge {
             display: inline-flex;
@@ -525,6 +566,22 @@
             body {
                 font-size: 17px;
             }
+
+            /* --- ★ スマホ向け調整 --- */
+            .price {
+                font-size: 3.2rem;
+            }
+            .initial-fee {
+                font-size: 1.6rem;
+            }
+            .discount-highlight {
+                font-size: 1.1rem;
+                padding: 10px 20px;
+            }
+            .discount-highlight .highlight-strong {
+                font-size: 1.25rem;
+            }
+            /* --- ここまで --- */
         }
     </style>
 </head>
@@ -542,7 +599,6 @@
     <section class="hero">
         <div class="container">
             <div class="monitor-badge">プライオリティメンバー募集受付中</div>
-            <!-- --- H1 テキスト修正 --- -->
             <h1 style="text-align: center;">０努力　100利益</h1>
             <p class="lead-2x" style="text-align: center;">AIを駆使し、超効率的に相場を攻略する<br>世界最先端のトレード体験をその手に。</p>
 
@@ -702,6 +758,11 @@
                 <div>
                     <p>今回、Alpha Pipsは人数限定で特別なプライオリティメンバーを募集します。</p>
                     <p>あなたは単なる「初期メンバー」ではなく、チームにとって「<span class="highlight">特別な存在</span>」です。世界上位５％を目指して、ともに切磋琢磨していきましょう。</p>
+                     <!-- ★割引アピールを追加★ -->
+                    <p style="margin-top: 20px; font-size: 1.2rem; font-weight: 500;">
+                        この特別な募集では、通常<span class="highlight yellow">¥500,000</span>の初期費用が<span class="highlight yellow">90%OFF</span>の<span class="highlight yellow">¥50,000</span>に、<br>
+                        月額料金も通常<span class="highlight yellow">¥30,000</span>から<span class="highlight yellow">50%OFF</span>の<span class="highlight yellow">¥15,000</span>でご参加いただけます！
+                    </p>
                 </div>
                 <div class="image-wrapper">
                     <img src="images/lp10.png" alt="メンバーシップ特典"> <!-- ★画像パス注意★ -->
@@ -710,11 +771,26 @@
 
             <div class="pricing">
                 <h3>プライオリティメンバー特別価格</h3>
-                <div class="price">¥15,000<span class="price-period">/月</span></div>
-                <div class="price-strikethrough">
-                    <span>￥30,000/月　初期費用 ¥298,000</span>
+
+                <!-- ★割引ハイライト表示を追加★ -->
+                <div class="discount-highlight">
+                    🚀 初期費用<span class="highlight-strong">90%OFF</span> ＆ 月額<span class="highlight-strong">50%OFF</span> 🚀
                 </div>
-                <p class="price-info">入会金、各種教材費、初期育成指導費等すべて免除。<br>さらに今だけサブスクリプション料金半額の プライオリティメンバー限定特別プランです。</p>
+
+                <!-- ★価格表示修正★ -->
+                <div class="price">¥15,000<span class="price-period">/月</span></div>
+                <div class="initial-fee"><span>+</span> 初期費用 ¥50,000</div>
+
+                <!-- ★取り消し線価格修正★ -->
+                <div class="price-strikethrough">
+                    <span>通常価格: ¥30,000/月 + 初期費用 ¥500,000</span>
+                </div>
+
+                <!-- ★価格情報テキスト修正★ -->
+                <p class="price-info">
+                    入会金、各種教材費、初期育成指導費等すべて込み。<br>
+                    さらに<span class="highlight yellow">初期費用90%OFF</span>＆<span class="highlight yellow">月額半額</span>の超限定プラン！
+                </p>
 
                 <div class="divider"></div>
 
@@ -779,10 +855,12 @@
         <div class="container">
             <h2>ここが未来の分岐点</h2>
             <p class="lead">最短最速クリアを目指し<br>人生は次のフェーズへ</p>
+            <!-- ★割引アピールを追加★ -->
+            <p>今なら<span class="highlight yellow" style="font-weight: bold;">初期費用90%OFF & 月額50%OFF</span>！</p>
             <p>Alpha Pipsは、AI・アルゴリズム時代の新しいトレーダー像を目指します。</p>
             <p>この特別な機会は、限られた人数にのみ提供されます。</p>
             <a href="https://whop.com/checkout/plan_YEhhVXxAwu2Lq/" class="btn btn-large">Alpha Pipsメンバーシップに参加する</a> <!-- ★リンク確認済★ -->
-                            <p>※ 募集締切: 人数到達次第締め切り</p>
+            <p>※ 募集締切: 人数到達次第締め切り</p>
         </div>
     </section>
 </body>
