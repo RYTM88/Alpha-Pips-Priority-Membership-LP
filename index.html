@@ -420,7 +420,12 @@
 
         .highlight {
             color: var(--accent2);
-            font-weight: 500;
+            font-weight: 500; /* 既存のスタイル */
+        }
+        /* 強調したい部分にさらに太字を適用 */
+        strong.highlight {
+             font-weight: 700; /* さらに太くする場合 */
+             /* color: var(--yellow); /* 色を変える場合 */
         }
         .highlight.yellow {
             color: var(--yellow);
@@ -513,6 +518,23 @@
             align-items: center;
         }
 
+        /* ★ CSS追加 ★ */
+        .section-subtitle {
+            font-size: 1.4rem; /* 文字サイズを大きく */
+            font-weight: 500;
+            color: var(--text); /* 必要に応じて色調整 */
+            margin-bottom: 25px; /* 下に間隔を追加 */
+            line-height: 1.4;
+        }
+        .two-col div p {
+            margin-bottom: 18px; /* 段落間の適切なマージン */
+        }
+        .two-col div p:last-child {
+            margin-bottom: 0; /* 最後の段落の下マージンを削除 */
+        }
+        /* ★ ここまでCSS追加 ★ */
+
+
         .image-caption {
             font-size: 1.05rem;
             text-align: center;
@@ -575,6 +597,11 @@
             .discount-highlight .highlight-strong {
                 font-size: 1.25rem;
             }
+             /* ★ スマホ向け調整 ★ */
+            .section-subtitle {
+                 font-size: 1.3rem;
+                 margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -607,11 +634,11 @@
 
             <div class="two-col">
                 <div>
-                    <!-- ★テキスト変更済み★ -->
-                    <p>ATZ Systemは、AI・データ活用によって誰でも簡単にプロの手法を完全再現できる”チート級”のチャート分析自動化システムです。</p>
+                    <!-- ★テキストとスタイル変更済み★ -->
+                    <p class="section-subtitle">データと大衆心理が織りなす市場のインサイトを手にする時が来ました。</p>
+                    <p><strong class="highlight">ATZ Systemは、AI・データ活用によって誰でも簡単にプロの手法を完全再現できる”チート級”のチャート分析自動化システムです。</strong></p>
                     <p>10年の相場経験を経て完成したマイティ―独自の市場構造論に基づくトレード手法がそのままコピー出来ます。</p>
-                    <p>あなたはもう、自分の感覚に頼ってトレードする必要はありません。そして無駄な「努力」や「労力」も必要ありません。</p>
-                    <p>ATZ Systemによって<span class="highlight">データと大衆心理が織りなす市場のインサイトを手にする時</span>が来ました。</p>
+                    <p>あなたはもう、自分の感覚に頼ってトレードする必要はありません。そして「努力」や「根性」も必要ありません。</p>
                 </div>
 
                 <div class="image-wrapper">
@@ -752,7 +779,7 @@
                 <div>
                     <p>今回、Alpha Pipsは人数限定で特別なプライオリティメンバーを募集します。</p>
                     <p>あなたは単なる「初期メンバー」ではなく、チームにとって「<span class="highlight">特別な存在</span>」です。世界上位５％を目指して、ともに切磋琢磨していきましょう。</p>
-                    <!-- ★割引詳細の段落を削除済み★ -->
+                    <!-- 割引詳細の段落は削除済み -->
                 </div>
                 <div class="image-wrapper">
                     <img src="images/lp10.png" alt="メンバーシップ特典"> <!-- ★画像パス注意★ -->
