@@ -520,14 +520,22 @@
 
         /* ★ CSS変更 ★ */
         .section-subtitle {
-            font-size: 1.6rem; /* 文字サイズをさらに大きく */
+            font-size: 1.6rem; /* 文字サイズ */
             font-weight: 500;
-            color: var(--text); /* 必要に応じて色調整 */
-            margin-bottom: 35px; /* 下に間隔をさらに追加 */
+            color: var(--text);
+            margin-bottom: 0; /* サブタイトル自体の下マージンは0に */
             line-height: 1.4;
         }
+
+        /* サブタイトルの ★直後★ の p 要素に上マージンを追加して行間を作成 */
+        .section-subtitle + p {
+            margin-top: 35px; /* ここで行間のサイズを調整 */
+        }
+
+        /* two-col 内の p 要素のデフォルト上マージンをリセットし、下マージンを設定 */
         .two-col div p {
-            margin-bottom: 18px; /* 段落間の適切なマージン */
+            margin-top: 0;
+            margin-bottom: 18px; /* 通常の段落間マージン */
         }
         .two-col div p:last-child {
             margin-bottom: 0; /* 最後の段落の下マージンを削除 */
@@ -600,7 +608,10 @@
              /* ★ スマホ向け調整 ★ */
             .section-subtitle {
                  font-size: 1.4rem; /* スマホでは少し小さめに調整 */
-                 margin-bottom: 25px; /* マージンも調整 */
+                 /* margin-bottom は 0 のまま */
+            }
+            .section-subtitle + p {
+                margin-top: 25px; /* スマホでは行間を少し狭める */
             }
         }
     </style>
@@ -634,7 +645,7 @@
 
             <div class="two-col">
                 <div>
-                    <!-- ★テキストとスタイル変更済み★ -->
+                    <!-- テキストとスタイル変更済み -->
                     <p class="section-subtitle">データと大衆心理が織りなす市場のインサイトを手にする時が来ました。</p>
                     <p><strong class="highlight">ATZ Systemは、AI・データ活用によって誰でも簡単にプロの手法を完全再現できる”チート級”のチャート分析自動化システムです。</strong></p>
                     <p>10年の相場経験を経て完成したマイティ―独自の市場構造論に基づくトレード手法がそのままコピー出来ます。</p>
